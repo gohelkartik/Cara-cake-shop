@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cara cake shope</title>
+   <link rel="stylesheet" href="https://pro.fontawsome.com/releases/v5.10.0/css/all.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Spartan', sans-serif; }
+        
+        /* Header & Nav */
+        #header { display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; background: #e3e6f3; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); z-index: 999; position: sticky; top: 0; }
+        #navbar { display: flex; align-items: center; }
+        #navbar li { list-style: none; padding: 0 20px; }
+        #navbar li a { text-decoration: none; font-size: 16px; font-weight: 600; color: #1a1a1a; transition: 0.3s; }
+        #navbar li a:hover, #navbar li a.active { color: #088178; }
+        
+        /* Product Section Fixes */
+        .section-p1 { padding: 40px 80px; }
+        #prodetails { display: flex; margin-top: 20px; border-bottom: 1px solid #eee; padding-bottom: 60px; }
+        
+        .single-pro-image { width: 40%; margin-right: 50px; }
+        .main-img-container { width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 8px; margin-bottom: 10px; }
+        .main-img-class { width: 100%; height: 100%; object-fit: cover; }
+        
+        .small-img-group { display: flex; justify-content: space-between; gap: 10px; }
+        .small-img-col { flex-basis: 24%; cursor: pointer; border: 1px solid #eee; border-radius: 4px; overflow: hidden; }
+        .small-img-col:hover { border-color: #088178; }
+        .small-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+
+        .single-pro-details { width: 50%; padding-top: 10px; }
+        .single-pro-details h4 { padding: 20px 0 10px 0; font-size: 28px; }
+        .single-pro-details h2 { font-size: 24px; color: #088178; margin-bottom: 20px; }
+        .single-pro-details select { padding: 12px; margin-bottom: 15px; width: 180px; border: 1px solid #ddd; outline: none; }
+        .single-pro-details input { width: 60px; height: 45px; padding-left: 10px; font-size: 16px; margin-right: 10px; border: 1px solid #ddd; }
+        
+        button.normal { padding: 14px 30px; background-color: #088178; color: white; border: none; border-radius: 4px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+        button.normal:hover { background-color: #088178; }
+
+        /* Newsletter & Footer */
+        #newsletter { display: flex; justify-content: space-between; align-items: center; background-color: #041e42; color: white; padding: 40px 80px; }
+        #newsletter input { padding: 15px; width: 300px; border: none; border-radius: 4px 0 0 4px; }
+        #newsletter button { border-radius: 0 4px 4px 0; }
+
+        /* Responsive Fixes */
+        @media (max-width: 799px) {
+            .section-p1 { padding: 40px; }
+            #prodetails { flex-direction: column; }
+            .single-pro-image { width: 100%; margin-right: 0; }
+            .single-pro-details { width: 100%; margin-top: 30px; }
+            #navbar { display: none; } /* Add your mobile menu logic here */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="header">
+       <a href="#"><img src="logo.png" class="logo" alt=""></a>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="shop.html">Cakes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+             <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span id="lg-bag-count" style="display: none; position: absolute; top: 10px; right: 8px; background: red; color: white; border-radius: 50%; padding: 2px 5px; font-size: 10px;">0</span></a></li>
+        </ul>
+        <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fa-solid fa-outdent"></i>
+    </div>
+    </section>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <div class="main-img-container">
+                <img src="cake1/1.1.jpg" class="main-img-class" alt="Chocolate Cake">
+            </div>
+            <div class="small-img-group">
+                <div class="small-img-col"><img src="cake1/1.1.jpg" class="small-img"></div>
+                <div class="small-img-col"><img src="cake1/1.2.jpg" class="small-img"></div>
+                <div class="small-img-col"><img src="cake1/1.3.jpg" class="small-img"></div>
+                <div class="small-img-col"><img src="cake1/1.4.jpg" class="small-img"></div>
+            </div>
+        </div>
+
+        <div class="single-pro-details">
+            <h6>Cakes / Chocolate</h6>
+            <h4>Belgian Truffle Cake</h4>
+            <h2 class="price-display">$250.00</h2>
+            <select class="weight-select" onchange="updateCakePrice(this)">
+                <option value="250">500gm</option>
+                <option value="500">1kg</option>
+                <option value="1000">2kg</option>
+            </select>
+            <br>
+            <input type="number" value="1" min="1">
+            <button class="normal">Add To Cart</button>
+            <h4 style="font-size: 18px; margin-top: 20px;">Product Details</h4>
+            <span>Our Belgian Truffle is made with 70% dark chocolate ganache and a moist, airy sponge. Perfect for celebrations.</span>
+        </div>
+    </section>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <div class="main-img-container">
+                <img src="cake1/2.1.jpg" class="main-img-class" alt="Red Velvet">
+            </div>
+            <div class="small-img-group">
+                <div class="small-img-col"><img src="cake1/2.1.jpg" class="small-img"></div>
+                <div class="small-img-col"><img src="cake1/2.2.jpg" class="small-img"></div>
+                <div class="small-img-col"><img src="cake1/2.3.jpg" class="small-img"></div>
+                <div class="small-img-col"><img src="cake1/2.4.jpg" class="small-img"></div>
+            </div>
+        </div>
+
+        <div class="single-pro-details">
+            <h6>Cakes / Classic</h6>
+            <h4>Red Velvet Cream Cheese</h4>
+            <h2 class="price-display">$250.00</h2>
+            <select class="weight-select" onchange="updateCakePrice(this)">
+                <option value="250">500gm</option>
+                <option value="500">1kg</option>
+                <option value="1000">2kg</option>
+            </select>
+            <br>
+            <input type="number" value="1" min="1">
+            <button class="normal">Add To Cart</button>
+            <h4 style="font-size: 18px; margin-top: 20px;">Product Details</h4>
+            <span>Classic Red Velvet with a tangy cream cheese frosting. A visual masterpiece and a crowd favorite.</span>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1">
+        <div>
+            <h4>Sign Up For Sweet Deals</h4>
+            <p>Get E-mail updates about our latest <span>Special Discounts.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="logo.png" alt="">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> khodiyar mandir nikol ahemdabad gujrat ,INDIA</p>
+        <p><strong>Phone:</strong> +91 ,9023628227</p>
+        <p><strong>Time:</strong> 10:00 to 18:00, MON - SAT</p>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="about.html">Abot Us</a>
+        <a href="contact.html">Delivery Information</a>
+        <a href="about.html">Privacy Policy</a>
+        <a href="about.html">term & Conditions</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+        <div class="col">
+        <h4>My Accounts</h4>
+        <a href="signup.html">Sign In</a>
+        <a href="cart.html">View Cart</a>
+        <a href="cart.html">My Wishlist</a>
+        <a href="about.html">Track My Order</a>
+        <a href="contact.html">Help</a>
+    </div>
+
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From Store Or Google Play</p>
+        <div class="row">
+            <img src="app.jpg" alt="">
+            <img src="play.jpg" alt="">
+        </div>
+        <p>Securd Payment Gateways</p>
+        <img src="pay.png" alt="">
+    </div>
+
+    <div class="copyright">
+        <p>© 2025, By-KARTIK -cara cake shop</p>
+    </div>
+  </footer>
+
+   
+    <script>
+    const allProducts = document.querySelectorAll('#prodetails');
+    allProducts.forEach(product => {
+        const mainImg = product.querySelector('.main-img-class');
+        const thumbs = product.querySelectorAll('.small-img');
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                mainImg.src = this.src;
+            });
+        });
+
+        const addBtn = product.querySelector('button.normal');
+        addBtn.addEventListener('click', () => {
+            const name = product.querySelector('h4').innerText;
+            const price = parseFloat(product.querySelector('.price-display').innerText.replace('$', ''));
+            const image = product.querySelector('.main-img-class').src;
+            const quantity = parseInt(product.querySelector('input').value);
+            
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ name, price, image, quantity });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Product added to cart!');
+            updateCartCount();
+        });
+    });
+
+    function updateCakePrice(selectElement) {
+        const priceTag = selectElement.parentElement.querySelector('.price-display');
+        const val = selectElement.value;
+        priceTag.innerText = "$" + val + ".00";
+    }
+
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const count = cart.reduce((acc, item) => acc + item.quantity, 0);
+        const badge = document.getElementById('lg-bag-count');
+        if (badge) {
+            badge.innerText = count;
+            badge.style.display = count > 0 ? 'block' : 'none';
+        }
+    }
+    updateCartCount();
+</script>
+</body>
+</html>
